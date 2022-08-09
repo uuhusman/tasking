@@ -72,7 +72,7 @@ func sqlQuery() {
 
 func main() {
 
-	sqlQuery()
+// 	sqlQuery()
 
 	http.Handle("/static/",
 		http.StripPrefix("/static/",
@@ -101,8 +101,8 @@ func main() {
 	http.HandleFunc("/save", handleSave)
 	http.HandleFunc("/update", handleUpdate)
 
-	fmt.Println("server started at localhost:80")
-	http.ListenAndServe(":80", nil)
+	fmt.Println("server started at localhost:8080")
+	http.ListenAndServe(":8080", nil)
 }
 
 func handleSave(w http.ResponseWriter, r *http.Request) {
