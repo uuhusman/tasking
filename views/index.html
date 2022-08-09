@@ -77,7 +77,7 @@
 
     tableTask = $('#tableTask').DataTable({
         "ajax": {
-            "url": "http://localhost:89/get_data",
+            "url": "http://localhost:8080/get_data",
             "contentType": "application/json",
             "type": "POST",
             "dataSrc": ''
@@ -116,7 +116,7 @@
         // calculateTotalPO(tableItems, columIndex);
       }else{
         $.ajax({
-            url: 'http://localhost:89/update',
+            url: 'http://localhost:8080/update',
             type: 'POST',
             data: JSON.stringify({id: dataRow.Id, status: var_status}),
             contentType: 'application/json',
@@ -175,7 +175,7 @@ function saveTask(){
     });
 
     $.ajax({
-        url: 'http://localhost:89/save',
+        url: 'http://localhost:8080/save',
         type: 'POST',
         data: payload,
         contentType: 'application/json',
