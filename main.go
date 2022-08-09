@@ -20,7 +20,7 @@ type task struct {
 }
 
 func connect() (*sql.DB, error) {
-	db, err := sql.Open("mysql", "root:mbe@tcp(127.0.0.1:3306)/db_task")
+	db, err := sql.Open("mysql", "freedb_usman:?Zmp67zTwEp7$%J@tcp(sql.freedb.tech:3306)/freedb_db_task")
 	if err != nil {
 		return nil, err
 	}
@@ -101,8 +101,8 @@ func main() {
 	http.HandleFunc("/save", handleSave)
 	http.HandleFunc("/update", handleUpdate)
 
-	fmt.Println("server started at localhost:89")
-	http.ListenAndServe(":89", nil)
+	fmt.Println("server started at localhost:80")
+	http.ListenAndServe(":80", nil)
 }
 
 func handleSave(w http.ResponseWriter, r *http.Request) {
